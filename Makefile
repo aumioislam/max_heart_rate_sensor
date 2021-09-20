@@ -1,5 +1,5 @@
 .PHONY: all
-all: heart_rate_test fifo_reading_test regression_test verify_and_temp_test
+all: heart_rate heart_rate_test fifo_reading_test regression_test verify_and_temp_test
 
 heart_rate: src/ampd/ampd.o src/max30101/max30101.o src/i2c/i2c.o get_heart_rate/heart_rate.o
 	$(CXX) -o $@ $^ 
